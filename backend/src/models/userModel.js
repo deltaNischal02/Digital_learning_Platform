@@ -28,6 +28,7 @@ const userSchema = new mongoose.Schema({
     department:{
         type:String,
         required:true,
+        enum:["arff","mechanical","it","atc"]
     }
 
 },
