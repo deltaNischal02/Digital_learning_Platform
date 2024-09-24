@@ -181,6 +181,8 @@ const SignupPage = () => {
       const res = await axios.post('http://localhost:7001/api/auth/register', newUser);
 
       if (res.status === 201) {
+      alert("Sign up sucessful!");
+
         setSuccess('Signup successful! Redirecting to login...');
         setError('');
         setTimeout(() => {
@@ -188,8 +190,10 @@ const SignupPage = () => {
         }, 2000);
       }
     } catch (err) {
+      alert(err.response?.data?.message || 'Something went wrong, please try again.');
       setError(err.response?.data?.message || 'Something went wrong, please try again.');
       setSuccess('');
+      console.error(err); // Log error for debugging
     }
   };
 
