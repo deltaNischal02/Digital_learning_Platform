@@ -11,28 +11,13 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    username:{
-        type:String,
-        required:true,
-        unique:true,
-    },
-    password:{
-        type:String,
-        required:true,
-        
+    phoneNumber:{
+        type:Number,
+        required:true
     },
     email:{
         type:String,
         required:true,
-    },
-    role:{
-        type:String,
-        required:true,
-        enum:["admin","user"],
-    },
-    phoneNumber:{
-        type:Number,
-        required:true
     },
     employeeId:{
         type:Number,
@@ -45,8 +30,23 @@ const userSchema = new mongoose.Schema({
     department:{
         type:String,
         required:true,
-        enum:["arff","mechanical","it","atc"]
-    }
+        enum:["ARFF","MECHANICAL","IT","ATC"]
+    },
+    role:{
+        type:String,
+        required:true,
+        enum:["Admin","User"],
+    },
+    username:{
+        type:String,
+        required:true,
+        unique:true,
+    },
+    password:{
+        type:String,
+        required:true,
+        
+    },
 
 },
 {
