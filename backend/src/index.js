@@ -1,5 +1,6 @@
 const express = require("express");
 require('dotenv').config(); // No need to assign dotenv to a variable
+const cors = require('cors');
 const dbConnect = require("./config/dbConnect"); // Import db connection function
 const app = express();
 const authRoutes = require("./routes/authRoutes");
@@ -7,6 +8,8 @@ const userRoutes = require("./routes/userRoutes");
 
 // Connect to the database
 dbConnect();
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware
 app.use(express.json());
@@ -31,3 +34,9 @@ const PORT = process.env.PORT || 7002;
 app.listen(PORT, () => {
   console.log(`SERVER IS RUNNING AT PORT ${PORT}`);
 });
+const corsOptions = {
+  origin: 'http://localhost:3000', // Your frontend's origin
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.use(cors(corsOptions));
