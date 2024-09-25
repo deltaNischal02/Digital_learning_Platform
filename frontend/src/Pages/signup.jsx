@@ -186,7 +186,7 @@ const SignupPage = () => {
         setSuccess('Signup successful! Redirecting to login...');
         setError('');
         setTimeout(() => {
-          navigate('/login');
+          navigate('/');
         }, 2000);
       }
     } catch (err) {
@@ -283,7 +283,7 @@ const SignupPage = () => {
               <option value="ARFF">ARFF</option>
               <option value="ATC">ATC</option>
               <option value="IT">IT</option>
-              <option value="Mechanical">Mechanical</option>
+              <option value="MECHANICAL">Mechanical</option>
             </Select>
             <Label></Label>
           </InputWrapper>
