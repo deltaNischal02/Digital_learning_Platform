@@ -186,7 +186,7 @@ const LoginPage = () => {
         setSnackbarOpen(true);
         setTimeout(() => {
           setSnackbarOpen(false);
-          navigate('/home'); // Redirect to home after successful login
+          navigate('/dashboard'); // Redirect to home after successful login
         }, 2000);
       }
     } catch (err) {
@@ -241,7 +241,7 @@ const LoginPage = () => {
       </form>
 
       <LinkText>
-        Don't have an account? <Link to="/signup">Sign up here</Link>
+        Don't have an account? <Link to="/">Sign up here</Link>
       </LinkText>
         {/* Snackbar */}
         {snackbarOpen && (
