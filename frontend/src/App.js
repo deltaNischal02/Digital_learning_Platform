@@ -7,6 +7,7 @@ import UserDashboard from './Pages/userDashboard';
 import Sidebar from './Components/sidebar';
 import UploadPage from './Pages/UploadPage';
 import TrainingCoursesQuiz from './Pages/QuizPages/TraningCoursesQuiz';
+import GeneralKnowlegeQuiz from './Pages/QuizPages/GeneralKnowledge';
 
 import styled from 'styled-components';
 
@@ -45,6 +46,8 @@ const App = () => {
           <Route path="/upload" element={<UploadPage />} />
           {/* routes for SubMenuItem */}
           <Route path="/quizzes/training-courses" element={<TrainingCoursesQuiz />} />
+          <Route path="/quizzes/general-knowledge" element={<GeneralKnowlegeQuiz />} />
+
 
         </Routes>
       </Content>
