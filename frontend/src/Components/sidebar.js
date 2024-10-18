@@ -7,6 +7,7 @@ import {
   FaQuestionCircle,
   FaChevronDown,
   FaChevronUp,
+  FaBookOpen,
 } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -111,6 +112,13 @@ const Sidebar = () => {
         style={{ backgroundColor: isActive("/upload") ? "#022B3A" : "inherit" }}
       >
         <FaUpload /> Upload Documents
+      </NavItem>
+      <NavItem
+        as={Link}
+        to="/material"
+        style={{ backgroundColor: isActive("/material") ? "#022B3A" : "inherit" }}
+      >
+        <FaBookOpen /> Materials
       </NavItem>
       <NavItem
         onClick={toggleQuizMenu}
