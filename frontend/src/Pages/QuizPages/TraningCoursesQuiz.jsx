@@ -147,7 +147,7 @@ const TrainingCoursesQuiz = () => {
       { id: "chapter-1", title: "ARFFS Chapter 1 - ARFFS", category: "ARFFS", description: "Test your knowledge of ARFFS.", icon: "📜" },
       { id: "chapter-2", title: "ARFFS Chapter 2 - Definitions", category: "Definitions", description: "Test your knowledge of definitions.", icon: "📜" },
       { id: "chapter-3", title: "ARFFS Chapter 3 - Equipment", category: "Equipment", description: "Learn about ARFFS equipment.", icon: "📜" },
-      { id: "chapter-4", title: "ARFFS Chapter 1 - ARFFS", category: "ARFFS", description: "Test your knowledge of ARFFS.", icon: "📜" },
+      
 
       
     ]
@@ -199,12 +199,13 @@ const TrainingCoursesQuiz = () => {
 
   const handleStartQuiz = () => {
     if (selectedTopic) {
-      navigate(`/quiz/training-courses/${selectedTopic}`, {
+      navigate(`/quiz/take`, {
         state: {
           difficulty,
           numberOfQuestions,
           quizDuration,
           isMixed: difficulty === 'Mixed',
+          chapterId: selectedTopic,
         },
       });
     }
@@ -302,7 +303,7 @@ const TrainingCoursesQuiz = () => {
                   value={quizDuration}
                   onChange={(e) => setQuizDuration(e.target.value)}
                 >
-                  {[15, 30, 45, 60].map((num) => (
+                  {[1,5, 10, 15, 20, 30, 40].map((num) => (
                     <option key={num} value={num}>
                       {num} Minutes
                     </option>
