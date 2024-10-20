@@ -3,30 +3,40 @@ const chapter1Data = {
   description: "Test your knowledge of ARFFS.",
   questions: [
     {
-      id: "q1",
-      question: "What does ARFFS stand for?",
+      id: 1,
+      questionText: "What does ARFFS stand for?",
+      difficulty: "Easy",
       options: [
-        "Aviation Rescue Fire Fighting Service",
-        "Airline Rescue Fire Fighting System",
-        "Aerial Rescue Fire Fighting Service",
-        "Aircraft Rescue Fire Fighting System"
+        { id: 1, text: "Aviation Rescue Fire Fighting Service" },
+        { id: 2, text: "Airline Rescue Fire Fighting System" },
+        { id: 3, text: "Aerial Rescue Fire Fighting Service" },
+        { id: 4, text: "Aircraft Rescue Fire Fighting System" }
       ],
-      correctAnswer: "Aviation Rescue Fire Fighting Service",
-      hint: "Think about the role of ARFFS in aviation.",
-      explanation: "ARFFS stands for Aviation Rescue Fire Fighting Service, which is a specialized service at airports."
+      correctOptionId: 1
     },
     {
-      id: "q2",
-      question: "Which of the following is a primary function of ARFFS?",
+      id: 2,
+      questionText: "Which of the following is a primary function of ARFFS?",
+      difficulty: "Medium",
       options: [
-        "Passenger boarding",
-        "Aircraft maintenance",
-        "Fire protection and rescue",
-        "Baggage handling"
+        { id: 1, text: "Passenger boarding" },
+        { id: 2, text: "Aircraft maintenance" },
+        { id: 3, text: "Fire protection and rescue" },
+        { id: 4, text: "Baggage handling" }
       ],
-      correctAnswer: "Fire protection and rescue",
-      hint: "Consider the emergency situations ARFFS deals with.",
-      explanation: "The primary function of ARFFS is to provide fire protection and rescue services in the event of an aircraft incident."
+      correctOptionId: 3
+    },
+    {
+      id: 3,
+      questionText: "TEST TEST?",
+      difficulty: "Medium",
+      options: [
+        { id: 1, text: "Passenger boarding" },
+        { id: 2, text: "Aircraft maintenance" },
+        { id: 3, text: "Fire protection and rescue" },
+        { id: 4, text: "Baggage handling" }
+      ],
+      correctOptionId: 3
     },
     // Additional questions can be added here
   ],
